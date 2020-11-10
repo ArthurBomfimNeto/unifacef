@@ -1,0 +1,54 @@
+{
+  "products":[
+  {
+    "id":1,
+    "name":"Sabonete",
+    "price":4,
+    "qty":6
+  }
+],
+  "users": [
+    {
+      "name": "Marcos ",
+      "email": "marcos@gmail.com",
+      "id": 6,
+      "civil": "solteiro"
+    },
+    {
+      "name": "Pedro ",
+      "email": "pedro@facef.com.br",
+      "id": 7
+    },
+    {
+      "name": "Arthur Bomfim",
+      "email": "arthur.neto@magazineluiza.com.br",
+      "rg": "5555555",
+      "cpf": "444444",
+      "id": 8
+    },
+    {
+      "name": "Pedro ffff",
+      "email": "SEMEMAIL@MAGAZINELUIZA.COM",
+      "rg": "666666",
+      "cpf": "8888888888",
+      "civil": "",
+      "id": 9
+    },
+    {
+      "name": "",
+      "email": "",
+      "rg": "",
+      "cpf": "",
+      "civil": "viuva",
+      "id": 10
+    },
+    {
+      "name": "game_db",
+      "email": "21848@unifacef.edu.br",
+      "rg": "444444444444",
+      "cpf": "5555555555",
+      "civil": "viuva",
+      "id": 11
+    }
+  ]
+}
