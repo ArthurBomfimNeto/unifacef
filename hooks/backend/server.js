@@ -26,13 +26,24 @@ mongoose.connect('mongodb://localhost/imc', {
     useUnifiedTopology: true 
 })
 
+let UserController = require('./controllers/user.controller')
+
 let ImcController = require('./controllers/imc.controller')
-const imcController = require('./controllers/imc.controller')
+const { busca } = require('./controllers/imc.controller')
+const { insere } = require('./controllers/user.controller')
+
 
 server.get('/imc', ImcController.busca)
 server.post('/imc', ImcController.insere)
 server.delete('/imc/:id', ImcController.remove)
 server.put('/imc/:id', ImcController.atualiza)
+
+//cria as rotas para o user
+//get
+//post
+server.get('/user', UserController.busca)
+server.post('/user',UserController.insere)
+
 
 server.listen(3003, () => {
     console.log(`Servidor ouvindo na porta 3003`)

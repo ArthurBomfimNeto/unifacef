@@ -8,12 +8,14 @@ let imcController = {
         let peso = req.body.peso
         let altura = req.body.altura
         let imc = peso / (altura * altura)
+        let userId = req.body.user // vamos recuperaro id do usuário 
 
         let resposta = {
             nome: nome,
             peso: peso,
             altura: altura,
-            imc: imc
+            imc: imc,
+            user: userId
         }
         // vamos inserir o IMC calculado no banco de dados
         var novo = IMC(resposta) // cria um objeto do tipo IMC
@@ -26,7 +28,9 @@ let imcController = {
     // rota para recuperar os IMCs
     busca: async (req, resp) => {
         IMC.find()
-            .then(todosimcs => {
+        .populate('user') // alimentar o resultado da consulta com username e password
+        .exec() // executa a consulta 
+        .then(todosimcs => {
                 resp.json(todosimcs)
             })
     },

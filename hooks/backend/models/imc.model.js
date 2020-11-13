@@ -13,4 +13,4 @@ let imcSchema = new Schema({
 })
 
 
-module.exports = mongoose.model('ImcData', imcSchema) 
+module.exports = mongoose.model('Imc', imcSchema) 
